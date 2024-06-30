@@ -1,0 +1,322 @@
+main
+    height: 2000px
+    width: 100%
+.main-div1
+    background-image: linear-gradient(to top, #E3E6E6,#E3E6E6, #E3E6E6, #E3E6E6, #E3E6E6,transparent, transparent),url("https://m.media-amazon.com/images/I/61nqLqnFKnL._SX3000_.jpg")
+    width: 100%
+    height: 500px
+    background-size: contain
+    background-repeat: no-repeat
+// contenedor 1-----
+.container-1
+    display: grid
+    grid-template-columns: repeat(6, 1fr)
+    grid-template-rows: repeat(8, 1fr)
+    row-gap: 25px
+    column-gap: 25px
+    position: absolute
+    top: 240px
+    width: 97%
+    height: 800px
+    cursor: pointer
+    margin-left: 1.5%
+    margin-right: 20px
+    &__div
+        background-color: white
+        &--1
+            grid-column: 1/4
+            grid-row: 1/4
+            position: relative
+            img
+                width: 85%
+                height: 70%
+                position: absolute
+                top: 45px
+                left: 20px
+            h3
+                position: absolute
+                left: 20px
+                top: 15px
+                font-size: 18px
+            p
+                position: absolute
+                bottom: 10px
+                left: 20px
+                color: #59A2AF
+                &:hover
+                    color: #CD6539
+        &--2
+            grid-column: 4/7
+            grid-row: 1/4
+            position: relative
+            h3
+                @include h3-contenedores()
+            img
+                @include img-contenedores(85%,62%,68px)
+            p
+                @include p-contenedores()
+
+        &--3
+            grid-column: 1/4
+            grid-row: 4/7
+            display: grid
+            grid-template-columns: repeat(6,1fr)
+            grid-template-rows: repeat(6,1fr)
+            column-gap: 10px
+            row-gap: 10px
+            h3
+                grid-column: 1/6
+                margin-left: 20px
+                margin-top: 10px
+            .div-Dcontenedor1
+                background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Keyboard_1x._SY116_CB667159063_.jpg")
+                background-size: contain
+                background-repeat: no-repeat
+                grid-column: 1/4
+                grid-row: 2/4
+            .div-Dcontenedor2
+                background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Headset_1x._SY116_CB667159060_.jpg")
+                background-size: contain
+                background-repeat: no-repeat
+                grid-column: 4/7
+                grid-row: 2/4
+            .div-Dcontenedor3
+                background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Chair_1x._SY116_CB667159060_.jpg")
+                background-size: contain
+                background-repeat: no-repeat
+                grid-column: 1/4
+                grid-row: 4/6
+            .div-Dcontenedor4
+                background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2021/June/Fuji_Quad_Mouse_1x._SY116_CB667159063_.jpg")
+                background-size: contain
+                background-repeat: no-repeat
+                grid-column: 4/7
+                grid-row: 4/6
+            p
+                grid-column: -7/-3
+                margin-left: 20px
+                color: #59A2AF
+                &:hover
+                    color: #CD6539 
+        &--4
+            grid-column: 4/7
+            grid-row: 4/7
+            @extend .container-1__div--3
+            p
+                grid-column: -7/-1
+            padding-left: 10px
+            padding-right: 10px
+            .div-Dcontenedor1
+                background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/CE/GamingWeek24/Homepage/DQC/CE24_SUM_GW_DQC_NW_GamingWeek_PC_v2_1x._SY116_CB558844445_.jpg")
+            .div-Dcontenedor2
+                background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/CE/GamingWeek24/Homepage/DQC/CE24_SUM_GW_DQC_NE_GamingWeek_Xbox_v2_1x._SY116_CB558844445_.jpg")
+            .div-Dcontenedor3
+                background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/CE/GamingWeek24/Homepage/DQC/CE24_SUM_GW_DQC_SW_GamingWeek_Sony_v2_1x._SY116_CB558844445_.jpg")
+            .div-Dcontenedor4
+                background-image: url("https://images-na.ssl-images-amazon.com/images/G/01/DiscoTec/2024/CE/GamingWeek24/Homepage/DQC/CE24_SUM_GW_DQC_SE_GamingWeek_Nintendo_v2_1x._SY116_CB558844445_.jpg")
+        &--5
+            grid-column: 1/7
+            grid-row: 7/9
+            position: relative
+            display: flex
+            flex-direction: column
+            gap: 10px
+            h3
+                margin-bottom: 10px
+                margin-top: 10px
+                margin-left: 20px
+            div
+                overflow-x: $scroll
+                position: inline-block
+                display: flex
+                gap: 10px
+                margin-bottom: 0px
+        &--6
+            grid-column: 4/7
+            grid-row: 4/7
+            display: none
+        &--7
+            display: none
+        &--8
+            display: none
+        &--9
+            display: none
+.container-2
+    position: absolute
+    top: 1060px
+    @extend .container-1
+
+
+footer
+    position: relative
+    bottom: 0%
+    width: 100%
+    height: 1000px
+    #button-footer
+        width: 100%
+        height: 50px
+        position: absolute
+        bottom: 1000px
+        border: none
+        background-color: #37475A
+        color: white
+        cursor: $cursor
+        &:hover
+            background-color: #485769
+    .div-footer1
+        height: 450px
+        width: 100%
+        background-color: #232F3E
+        position: absolute
+        display: flex
+        justify-content: center
+        align-items: start
+        gap: 50px
+        color: white
+        &__container
+            width: 100%
+            height: 313px
+            display: flex
+            justify-content: center
+            position: relative
+            align-items: start
+            gap: 50px
+            padding-top: 50px
+            color: white
+            overflow: hidden
+            section
+                p
+                    margin-top: 10px
+                    font-size: 13px
+                    color: #D7D7D8
+                    cursor: pointer
+                    &:hover
+                        text-decoration: underline
+        .line
+            width: 100%
+            height: 0.5px
+            background-color: #d7d7d827
+            position: absolute
+            bottom: 30%
+        .final
+            width: 100%
+            height: 10px
+            background-color: #232F3E
+            position: absolute
+            bottom: 20%
+            display: flex
+            justify-content: center
+            gap: 20px
+            #img-logo
+                width: 80px
+                height: 35px
+                background-size: contain
+                margin-right: 60px
+                margin-top: 7px
+            &__div
+                display: flex
+                justify-content: center
+                align-items: center
+                font-size: 13px
+                color: #d4d6c3
+                &--1
+                    width: 100px
+                    height: 40px
+                    border: 2px solid #d7d7d827
+                    border-radius: 5px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    font-size: 13px
+                    color: #d4d6c3
+                    cursor: pointer
+                    gap: 5px
+                    &:hover
+                        border: 2px solid #d7d7d857
+                &--2
+                    width: 200px
+                    height: 40px
+                    border: 2px solid #d7d7d827
+                    border-radius: 5px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    font-size: 13px
+                    color: #d4d6c3
+                    cursor: pointer
+                    &:hover
+                        border: 2px solid #d7d7d857
+                &--3
+                    width: 130px
+                    height: 40px
+                    border: 2px solid #d7d7d827
+                    border-radius: 5px
+                    display: flex
+                    justify-content: center
+                    align-items: center
+                    font-size: 13px
+                    color: #d4d6c3
+                    cursor: pointer
+                    gap: 7px
+                    img
+                        width: 15px
+                        height: 15px
+                    &:hover
+                        border: 2px solid #d7d7d857
+
+    .div-footer2
+        width: 100%
+        height: 550px
+        background-color: #131A22
+        position: absolute
+        bottom: 0%
+        display: flex
+        justify-content: center
+        align-items: center
+        gap: 40px
+        overflow: hidden
+        section
+            width: 80px
+            height: 60%
+            display: flex
+            flex-direction: column
+            margin-top: -90px
+            gap: 15px
+            h6
+                color: #DDDDDD
+                &:hover
+                    text-decoration: underline
+                    cursor: pointer
+            p
+                color: #909191
+                font-size: 13px
+                &:hover
+                    text-decoration: underline
+                    cursor: pointer
+    
+    .div-footer3
+        width: 70%
+        height: 30px
+        position: absolute
+        bottom: 5%
+        display: flex
+        justify-content: center
+        align-items: center
+        left: 50%
+        transform: translateX(-50%)
+        color: #DDDDDD
+        gap: 15px
+        h6
+            &:hover
+                text-decoration: underline
+                cursor: pointer
+
+    .div-footer4
+        width: 100%
+        height: 30px
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        bottom: 2%
+        color: #DDDDDD

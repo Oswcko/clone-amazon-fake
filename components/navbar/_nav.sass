@@ -1,0 +1,339 @@
+body header nav
+    width: 100%
+    height: 100px
+.navsec1
+    background-color: #131921
+    display: flex
+    justify-content: space-between
+    align-items: center
+    position: relative
+    width: 100%
+    height: 60px
+    // ----------
+    .navsec1-div1
+        width: 90%
+        height: 50px
+        position: relative
+        display: flex
+        margin-bottom: 4px
+        gap: 15px
+        #img-burger
+            width: 45px
+            height: 45px
+            margin-top: 4px
+        #img-logo
+            width: 100px
+            height: 40px
+            margin-top: 7px
+        .enviar
+            color: white
+            display: none
+            justify-content: center
+            align-items: center
+            ion-icon
+                margin-top: 12px
+            &__div--1
+                font-size: 12px
+                color: #C6CCCC
+            &__div--2
+                font-size: 13px
+                font-weight: 550
+        &__div1
+            width: 600px
+            height: auto
+            padding: 0%
+            display: none
+            margin-top: 5px
+            #todos
+                width: 60px
+                height: 40px
+                display: flex
+                justify-content: center
+                align-items: center
+                background-color: #E6E6E6
+                color: #787e7e
+                border-top-left-radius: 3px
+                border-bottom-left-radius: 3px
+                &:hover
+                    background-color: #D4D4D4
+                    cursor: pointer
+                p
+                    font-size: 13px
+                ion-icon
+                    width: 13px
+                    height: 13px
+            #search
+                width: 85%
+                height: 40px
+                border: none
+                margin-top: 0%
+            #buttonsearch
+                width: 40px
+                height: 40px
+                border: none
+                background-color: #FEBD69
+                border-top-right-radius: 3px
+                border-bottom-right-radius: 3px
+                display: flex
+                justify-content: center
+                align-items: center
+                z-index: 5
+                &:hover
+                    background-color: #F3A847
+                    cursor: pointer
+                ion-icon
+                    width: 20px
+                    height: 20px
+        .idioma
+            display: none
+            justify-content: center
+            align-items: center
+            color: white
+            gap: 2px
+            padding-top: 5px
+            margin-left: 10px
+            img
+                width: 18px
+                height: 18px
+            h4
+                font-size: 15px
+                font-weight: 700
+            ion-icon
+                color: #787e7e
+                width: 10px
+                height: 10px
+                margin-top: 2px
+        .user
+            width: 120px
+            display: none
+            justify-content: center
+            align-items: center
+            color: #e9e9e9
+            gap: 2px
+            p
+                font-size: 11px
+            h5
+                color: white
+            ion-icon
+                color: #787e7e
+                width: 10px
+                height: 10px
+                margin-top: 15px
+
+        .devoluciones
+            display: none
+            justify-content: center
+            align-items: left
+            flex-direction: column
+            color: white
+            p
+                font-size: 12px
+            h4
+                font-size: 14px
+    // ---------------
+    .navsec1-div2
+        width: 50%
+        height: 50px
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        margin-bottom: 4px
+        
+        #boton-search
+            width: 35px
+            height: 35px
+            background-color: #FEBD69
+            border-radius: 8px
+            border: none
+            cursor: pointer
+            right: 150px
+            &:hover
+                background-color: #F3A847
+            svg
+                width: 22px
+                height: 22px
+        #id
+            color: white
+            font-size: 13px
+            display: none
+        #img-perfil
+            width: 35px
+            height: 35px
+        #img-carrito
+            width: 45px
+            height: 55px
+// section 2 del nav
+
+.navsec2
+    height: 40px
+    width: 100%
+    background-color: #232F3E
+    display: flex
+    position: relative
+    gap: 1px
+    padding-left: 0px
+    .sec2-div1
+        @include navsec2(80px,35px)
+        display: none
+        ion-icon
+            width: 30px
+            height: 20px
+            transform: translateY(-2px)
+        font-size: 13px
+    #checkbox
+        display: none
+    .fondolabel
+        @if 5 == 5
+            background-color: #000000a4
+        @else 
+            background-color: green
+        width: 150%
+        height: 100vh
+        position: absolute
+        z-index: 6
+        top: -150%
+        left: 0px
+        transform: translateX(-150%)
+    aside
+        width: 320px
+        height: 100vh
+        background-color: white
+        position: absolute
+        z-index: 6
+        top: -150%
+        left: 0px
+        overflow-y: scroll
+        overflow-x: hidden
+        transform: translateX(-360px)
+        ._div1
+            width: 100%
+            height: 60px
+            background-color: #232F3E
+            color: white
+            display: flex
+            justify-content: center
+            align-items: center
+            gap: 10px
+            img
+                width: 40px
+                height: 40px
+                fill: white
+        label
+        ion-icon
+            margin-left: 320px
+            z-index: 10
+            width: 30px
+            height: 30px
+            cursor: pointer
+            color: white
+        @for $contador from 1 through 4
+            .aside__div-#{$contador}
+                width: 100%
+                height: 250px
+                border-bottom: 2px solid #D5DBDB
+                display: flex
+                flex-direction: column
+                gap: 5px
+                @if $contador >= 2
+                    height: 300px
+                    margin-top: 20px
+                     
+                .titulo
+                    margin-left: 30px
+                    font-weight: 300
+                @for $contador from 1 through 4
+                    .aside__section-#{$contador}
+                        width: 100%
+                        height: 50px
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        margin-top: 10px
+                        p
+                            font-size: 14px
+                            color: #787e7e
+                            margin-left: 30px
+                        img
+                            fill: #787e7e
+                            width: 20px
+                            height: 20px
+                            margin-right: 20px
+                        &:hover
+                            background-color: #EAEDED
+    #checkbox:checked ~ aside
+        transform: translateX(0px)
+    #checkbox:checked ~ .fondolabel
+        transform: translateX(0px)
+    .sec2-div2
+        @include navsec2(120px,35px)
+        font-size: 10px
+        padding: 10px 5px
+    .sec2-div3
+        @include navsec2(120px,35px)
+        font-size: 10px
+    .sec2-div4
+        @include navsec2(60px,35px)
+        font-size: 10px
+    .sec2-div5
+        @include navsec2(120px,35px)
+        font-size: 10px
+    .sec2-div6
+        @include navsec2(70px,35px)
+        font-size: 10px
+
+.divcenter
+        width: 500px
+        min-height: 100px
+        border-radius: 8px
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        z-index: 150
+        background-color: #1319219f
+        color: white
+        display: none
+        .buscador
+            display: flex
+            height: 55px
+            width: 100%
+            margin: 12px 12px 0
+            .buscargg
+                border: 1px solid #FEBD69
+                border-radius: 8px
+                width: 85%
+                height: 100%
+                display: flex
+                align-items: center
+                background-color: #13192175
+                overflow: hidden
+                input
+                    width: 100%
+                    height: 100%
+                    background-color: #13192102
+                    color: white
+                    font-size: 18px
+                    border: none
+                    outline: none
+                    padding-left: 15px
+                & ion-icon
+                    min-width: 28px
+                    font-size: 28px
+                    margin: 0 5px
+                    color: #FEBD69
+                    border-radius: 3px
+                    &:hover
+                        color: #e2ab62
+                #equisinput
+                    cursor: $cursor
+                    display: none
+        #btn-cerrar
+                font-size: 17px
+                color: #FEBD69
+                margin: 0 8px
+                cursor: $cursor
+                padding-top: 3%
+                &:hover
+                    color: #e2ab62
+
+
